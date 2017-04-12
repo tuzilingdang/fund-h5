@@ -1,0 +1,41 @@
+
+/* gulp 相关说明 */
+
+|===============================================|
+  1. 安装gulp依赖包（如果项目文件没有依赖插件包）
+  npm install
+
+  2. 执行 gulp 命令
+  生成经过压缩／校验／合并后的 dist/css/*.css 和 dist/js/*.js 和 dist/index.html 的文件
+
+  3. 执行 gulp img 命令
+  压缩 *.{png,jpg,gif,ico} 等格式图片
+|===============================================|
+
+/* gulp 注意事项 */
+/* gulp 打包压缩成一个带哈西值名称的css／js文件，必须按下面格式编写，不然会产生一些未知问题 */
+
+|---------------------------------------------------|
+  /* 以此开始，包裹住需要压缩成一个文件的所有文件 */
+
+  <!-- build:css css/combined.css -->
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+
+  /* 以此结束 */
+|---------------------------------------------------|
+  /* 以此开始，包裹住需要压缩成一个文件的所有文件 */
+
+  <!-- build:js js/combined.js -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/vendor/zepto.min.js"></script>
+    <script src="js/vendor/flexible.js"></script>
+    <script src="js/vendor/makegrid.js"></script>
+    <script src="js/vendor/device.min.js"></script>
+    <script src="js/main.js"></script>
+  <!-- endbuild -->
+
+  /* 以此结束 */
+|---------------------------------------------------|

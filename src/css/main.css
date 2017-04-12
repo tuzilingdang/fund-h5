@@ -1,0 +1,18 @@
+/* 重置浏览器默认样式 */
+input, button, select, textarea {
+    outline: none
+}
+
+textarea {
+    resize: none
+}
+
+*:focus {
+    outline: none
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
